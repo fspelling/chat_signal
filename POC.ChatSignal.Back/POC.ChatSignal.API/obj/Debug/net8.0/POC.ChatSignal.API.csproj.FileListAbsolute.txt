@@ -64,3 +64,5 @@ C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.API\bin\Debug\ne
 C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.API\bin\Debug\net8.0\POC.ChatSignal.Sql.dll
 C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.API\bin\Debug\net8.0\POC.ChatSignal.Sql.pdb
 C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.API\bin\Debug\net8.0\POC.ChatSignal.Domain.pdb
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.API\bin\Debug\net8.0\POC.ChatSignal.Service.dll
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.API\bin\Debug\net8.0\POC.ChatSignal.Service.pdb

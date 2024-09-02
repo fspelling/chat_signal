@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "POC.ChatSignal.Service/1.0.0": {
+        "dependencies": {
+          "POC.ChatSignal.Domain": "1.0.0"
+        },
         "runtime": {
           "POC.ChatSignal.Service.dll": {}
+        }
+      },
+      "POC.ChatSignal.Domain/1.0.0": {
+        "runtime": {
+          "POC.ChatSignal.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "POC.ChatSignal.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "POC.ChatSignal.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

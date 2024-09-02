@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POC.ChatSignal.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c18b323b9b4dd98bcb62a8f1f13dc348b711f2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+217fce19a863f033e9fc8a24a6454a43851e55bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("POC.ChatSignal.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POC.ChatSignal.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

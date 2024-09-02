@@ -9,6 +9,7 @@
       "POC.ChatSignal.API/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.8",
+          "POC.ChatSignal.Service": "1.0.0",
           "POC.ChatSignal.Sql": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
@@ -334,6 +335,14 @@
           "POC.ChatSignal.Domain.dll": {}
         }
       },
+      "POC.ChatSignal.Service/1.0.0": {
+        "dependencies": {
+          "POC.ChatSignal.Domain": "1.0.0"
+        },
+        "runtime": {
+          "POC.ChatSignal.Service.dll": {}
+        }
+      },
       "POC.ChatSignal.Sql/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.8",
@@ -563,6 +572,11 @@
       "hashPath": "system.text.json.8.0.4.nupkg.sha512"
     },
     "POC.ChatSignal.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "POC.ChatSignal.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
