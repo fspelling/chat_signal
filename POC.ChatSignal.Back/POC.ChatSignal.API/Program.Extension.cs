@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using POC.ChatSignal.Domain.Interfaces.Repository;
+using POC.ChatSignal.Domain.Interfaces.Service;
+using POC.ChatSignal.Service;
 using POC.ChatSignal.Sql;
+using POC.ChatSignal.Sql.Repository;
 
 namespace POC.ChatSignal.API
 {
@@ -7,6 +11,8 @@ namespace POC.ChatSignal.API
     {
         public static void ConfigureInjectDependency(this WebApplicationBuilder builder)
         {
+            builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+            builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
         }
 
         public static void ConfigureSqlDbContext(this WebApplicationBuilder builder)

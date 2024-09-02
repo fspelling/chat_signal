@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Hubs\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\POC.ChatSignal.Service\POC.ChatSignal.Service.csproj" />
     <ProjectReference Include="..\POC.PromoSignal.Sql\POC.ChatSignal.Sql.csproj" />
   </ItemGroup>
 
