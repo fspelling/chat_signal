@@ -1,0 +1,9 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/POC.ChatSignal.Back
+/POC.ChatSignal.API/obj
+/POC.ChatSignal.Domain/obj
+/POC.ChatSignal.Sql/obj
+/POC.ChatSignal.Service/obj

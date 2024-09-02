@@ -13,3 +13,6 @@ C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\obj\Debug\n
 C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\obj\Debug\net8.0\POC.ChatSignal.Sql.pdb
 C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\obj\Debug\net8.0\POC.ChatSignal.Sql.genruntimeconfig.cache
 C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\obj\Debug\net8.0\ref\POC.ChatSignal.Sql.dll
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\bin\Debug\net8.0\POC.ChatSignal.Domain.dll
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\bin\Debug\net8.0\POC.ChatSignal.Domain.pdb
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.PromoSignal.Sql\obj\Debug\net8.0\POC.Chat.13686A2E.Up2Date
