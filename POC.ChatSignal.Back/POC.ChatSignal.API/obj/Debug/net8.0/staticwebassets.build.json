@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZckruONBaXmJhw3LixQKBoKFC1O1Oree/mzTB3DZD6Y=",
+  "Source": "POC.ChatSignal.API",
+  "BasePath": "_content/POC.ChatSignal.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

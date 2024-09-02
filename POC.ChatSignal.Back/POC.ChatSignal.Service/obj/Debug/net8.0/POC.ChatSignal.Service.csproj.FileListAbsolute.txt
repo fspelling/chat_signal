@@ -1,0 +1,12 @@
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\bin\Debug\net8.0\POC.ChatSignal.Service.deps.json
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\bin\Debug\net8.0\POC.ChatSignal.Service.dll
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\bin\Debug\net8.0\POC.ChatSignal.Service.pdb
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.AssemblyInfoInputs.cache
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.AssemblyInfo.cs
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.csproj.CoreCompileInputs.cache
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.sourcelink.json
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.dll
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\refint\POC.ChatSignal.Service.dll
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\POC.ChatSignal.Service.pdb
+C:\Projetos\pocs\chat_signal\POC.ChatSignal.Back\POC.ChatSignal.Service\obj\Debug\net8.0\ref\POC.ChatSignal.Service.dll
