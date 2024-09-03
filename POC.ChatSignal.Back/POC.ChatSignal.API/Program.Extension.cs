@@ -16,6 +16,6 @@ namespace POC.ChatSignal.API
         }
 
         public static void ConfigureSqlDbContext(this WebApplicationBuilder builder)
-            => builder.Services.AddDbContext<ChatDbContext>(db => db.UseSqlite("Data Source=Database\\ChatWeb.db"));
+            => builder.Services.AddDbContext<ChatDbContext>(db => db.UseSqlite("Data Source=DB\\ChatWeb.db"));
     }
 }
