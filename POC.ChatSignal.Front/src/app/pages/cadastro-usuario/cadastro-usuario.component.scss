@@ -2,6 +2,6 @@
     background-color: #32A060;
 }
 
-::ng-deep input[type=text] {
+::ng-deep input[type=text], input[type=password] {
     max-width: 690px;
 }

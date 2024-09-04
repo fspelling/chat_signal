@@ -68,8 +68,7 @@ namespace POC.ChatSignal.Sql.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("ConnectionId")
-                        .IsRequired()
+                    b.Property<string>("ConnectionIds")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

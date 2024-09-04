@@ -5,5 +5,7 @@ namespace POC.ChatSignal.Domain.Interfaces.Repository
 {
     public interface IUsuarioRepository : IRepositoryBase<Usuario>
     {
+        Task<Usuario?> BuscarPorEmail(string email);
+        Task<Usuario?> BuscarPorEmailSenha(string email, string senha);
     }
 }

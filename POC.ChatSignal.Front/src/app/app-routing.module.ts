@@ -8,7 +8,7 @@ import { CadastroUsuarioComponent } from './pages/cadastro-usuario/cadastro-usua
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'conversacao',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {

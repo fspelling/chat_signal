@@ -2,14 +2,14 @@
     <img width="100px" src="assets/images/logo.png" />
     <h1>ChatWeb</h1>
     <div class="container-form">
-        <form>
-            <input type="text" placeholder="E-mail" />
+        <form [formGroup]="formLogin" (submit)="login()">
+            <input type="text" placeholder="E-mail" formControlName="email" />
             <br />
-            <input type="text" placeholder="Senha" />
+            <input type="text" placeholder="Senha" formControlName="senha" />
 
             <div class="container-button">
-                <input type="button" value="ACESSAR" />
-                <input type="button" value="CADASTRAR" />
+                <input type="submit" value="ACESSAR" />
+                <input type="button" value="CADASTRAR" routerLink="/cadastro-usuario" />
             </div>
         </form>
     </div>

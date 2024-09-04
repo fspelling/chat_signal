@@ -1,16 +1,16 @@
 <div class="container-login">
-    <form>
+    <form [formGroup]="formCadastro" (submit)="salvar()">
         <img width="100px" src="assets/images/logo.png" />
         <h1>ChatWeb</h1>
         <div class="container-form">
-            <input type="text" placeholder="Nome" />
+            <input type="text" placeholder="Nome" formControlName="nome" />
             <br />
-            <input type="text" placeholder="E-mail" />
+            <input type="text" placeholder="E-mail" formControlName="email" />
             <br />
-            <input type="text" placeholder="Senha" />
+            <input type="password" placeholder="Senha" formControlName="senha" />
 
             <div class="container-button">
-                <input type="button" value="CADASTRAR" />
+                <input type="submit" value="CADASTRAR" [disabled]="formCadastro.invalid" />
             </div>
         </div>
     </form>

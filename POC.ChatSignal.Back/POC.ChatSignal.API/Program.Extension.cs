@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using POC.ChatSignal.API.Hubs;
 using POC.ChatSignal.Domain.Interfaces.Repository;
 using POC.ChatSignal.Domain.Interfaces.Service;
 using POC.ChatSignal.Service;
@@ -17,5 +18,8 @@ namespace POC.ChatSignal.API
 
         public static void ConfigureSqlDbContext(this WebApplicationBuilder builder)
             => builder.Services.AddDbContext<ChatDbContext>(db => db.UseSqlite("Data Source=DB\\ChatWeb.db"));
+
+        public static void UseSignalR(this WebApplication app)
+            => app.MapHub<ChatHub>("/ChatHub");
     }
 }

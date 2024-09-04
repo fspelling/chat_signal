@@ -7,6 +7,7 @@ namespace POC.ChatSignal.Domain.Interfaces.Repository.Base
         Task Inserir(Entity entidade);
         Task Atualizar(Entity entidade);
         Task<IList<Entity>> Listar();
+        Task<Entity?> BuscarPorId(int id);
         Task Remover(int id);
     }
 }

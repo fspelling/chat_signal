@@ -11,8 +11,8 @@ using POC.ChatSignal.Sql;
 namespace POC.ChatSignal.Sql.Migrations
 {
     [DbContext(typeof(ChatDbContext))]
-    [Migration("20240903022456_db-create")]
-    partial class dbcreate
+    [Migration("20240904140103_create-db")]
+    partial class createdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,8 +71,7 @@ namespace POC.ChatSignal.Sql.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("ConnectionId")
-                        .IsRequired()
+                    b.Property<string>("ConnectionIds")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

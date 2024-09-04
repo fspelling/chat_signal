@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0px;
+    background-color: #32A060;
 }
 .container-login {
     margin: 0 auto;
@@ -63,7 +64,7 @@ body {
     margin-bottom: 10px;
     
 }
-input[type=text] {
+input[type=text], input[type=password] {
     background-color: #267848;
     color: white;
     border-radius: 25px;
@@ -73,13 +74,13 @@ input[type=text] {
     width: 100%;
     font-size: 18px;
 }
-input[type=text]::placeholder {
+input[type=text]::placeholder, input[type=password]::placeholder {
     color: white;
 }
-input[type=button]:hover, .btn-send:hover {
+input[type=button]:hover, input[type=submit]:hover, .btn-send:hover {
     background-color: #1D5C37;
 }
-input[type=button], .btn-send {
+input[type=button], input[type=submit], .btn-send {
     background-color: #267848;
     color: white;
     border-radius: 25px;

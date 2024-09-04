@@ -1,28 +1,37 @@
-﻿using POC.ChatSignal.Domain.Entity.Base;
+﻿using Microsoft.EntityFrameworkCore;
+using POC.ChatSignal.Domain.Entity.Base;
 using POC.ChatSignal.Domain.Interfaces.Repository.Base;
 
 namespace POC.ChatSignal.Sql.Repository.Base
 {
-    public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : EntityBase
+    public abstract class RepositoryBase<TEntity>(ChatDbContext dbContext) : IRepositoryBase<TEntity> where TEntity : EntityBase
     {
-        public Task Atualizar(TEntity entidade)
+        protected readonly ChatDbContext dbContext = dbContext;
+
+        public async Task Atualizar(TEntity entidade)
         {
-            throw new NotImplementedException();
+            dbContext.Entry(entidade).State = EntityState.Modified;
+            await dbContext.SaveChangesAsync();
         }
 
-        public Task Inserir(TEntity entidade)
+        public async Task<TEntity?> BuscarPorId(int id)
+            => await dbContext.Set<TEntity>().Where(e => e.ID == id).FirstOrDefaultAsync();
+
+        public async Task Inserir(TEntity entidade)
         {
-            throw new NotImplementedException();
+            dbContext.Entry(entidade).State = EntityState.Added;
+            await dbContext.SaveChangesAsync();
         }
 
-        public Task<IList<TEntity>> Listar()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IList<TEntity>> Listar()
+            => await dbContext.Set<TEntity>().ToListAsync();
 
-        public Task Remover(int id)
+        public async Task Remover(int id)
         {
-            throw new NotImplementedException();
+            var entidade = await dbContext.Set<TEntity>().Where(e => e.ID == id).FirstOrDefaultAsync();
+
+            dbContext.Entry(entidade).State = EntityState.Deleted;
+            await dbContext.SaveChangesAsync();
         }
     }
 }
