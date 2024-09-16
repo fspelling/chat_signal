@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ConversacaoComponent } from './pages/conversacao/conversacao.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CadastroUsuarioComponent } from './pages/cadastro-usuario/cadastro-usuario.component';
+import { authCanActivate } from './core/guards/auth-canActivate.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'conversacao',
-    component: ConversacaoComponent
+    component: ConversacaoComponent,
+    canActivate: [authCanActivate]
   },
   {
     path: 'login',

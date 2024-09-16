@@ -8,6 +8,8 @@ namespace POC.ChatSignal.Sql.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Grupo> builder)
         {
+            builder.HasKey(p => p.ID);
+            builder.Property(p => p.ID).ValueGeneratedOnAdd();
         }
     }
 }

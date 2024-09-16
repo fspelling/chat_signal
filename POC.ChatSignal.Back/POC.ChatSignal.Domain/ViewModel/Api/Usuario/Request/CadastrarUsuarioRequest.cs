@@ -1,4 +1,4 @@
-﻿namespace POC.ChatSignal.Domain.ViewModel.Usuario.Request
+﻿namespace POC.ChatSignal.Domain.ViewModel.Api.Usuario.Request
 {
     public class CadastrarUsuarioRequest
     {

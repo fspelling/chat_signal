@@ -20,12 +20,7 @@ export class UsuarioService {
         return this.http.post(`${API}/usuario/signin`, payload);
     }
 
-    atualizarConnection(usuarioId: number, connectionId: string): Observable<any> {
-        const payload = { usuarioId, connectionId };
-        return this.http.patch(`${API}/usuario/connection`, payload);
-    }
-
-    removerConnection(usuarioId: number, connectionId: string): Observable<any> {
-        return this.http.delete(`${API}/usuario/${usuarioId}/connection/${connectionId}`);
+    obterUsuarios(): Observable<any> {
+        return this.http.get(`${API}/usuario`);
     }
 }

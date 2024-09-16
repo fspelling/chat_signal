@@ -1,17 +1,16 @@
-﻿namespace POC.ChatSignal.Domain.Extensions
+﻿using FluentValidation;
+
+namespace POC.ChatSignal.Domain.Extensions
 {
     public static class ValidatorExtension
     {
-        public static void ValidarCampoObrigatorioException<T>(this Dictionary<string, object> parameters) where T : Exception
+        public static async Task ValidarRequestException<TRequest, TException>(this IValidator<TRequest> validator, TRequest request)
+            where TException : Exception
         {
-            foreach (var parameter in parameters)
-            {
-                if (parameter.Value is null)
-                {
-                    var messageError = $"O campo {parameter.Key} é obrigatório.";
-                    throw (T)Activator.CreateInstance(typeof(T), [messageError]);
-                }
-            }
+            var validacaoRequest = await validator.ValidateAsync(request);
+
+            if (!validacaoRequest.IsValid)
+                throw (TException)Activator.CreateInstance(typeof(TException), [validacaoRequest.Errors.First().ErrorMessage])!;
         }
     }
 }

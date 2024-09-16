@@ -11,8 +11,8 @@ using POC.ChatSignal.Sql;
 namespace POC.ChatSignal.Sql.Migrations
 {
     [DbContext(typeof(ChatDbContext))]
-    [Migration("20240904140103_create-db")]
-    partial class createdb
+    [Migration("20240910033714_db-create")]
+    partial class dbcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

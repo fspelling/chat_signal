@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using POC.ChatSignal.Domain.ViewModel.Base;
+using POC.ChatSignal.Domain.ViewModel.Api.Base;
 using System.Net;
 
 namespace POC.ChatSignal.API.Controllers.Base
@@ -24,11 +24,5 @@ namespace POC.ChatSignal.API.Controllers.Base
                 _ => StatusCode((int)statusCode, responseError)
             };
         }
-
-        protected string? BuscarUsuarioLogado()
-            => User.Claims.FirstOrDefault(c => c.Type == "keyLogin")?.Value;
-
-        protected string? VerificarUsuarioBackOffice()
-            => User.Claims.FirstOrDefault(c => c.Type == "BackOffice")?.Value;
     }
 }

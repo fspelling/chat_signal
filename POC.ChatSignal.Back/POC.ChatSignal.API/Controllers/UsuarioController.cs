@@ -2,9 +2,9 @@
 using POC.ChatSignal.API.Controllers.Base;
 using POC.ChatSignal.Domain.Exceptions;
 using POC.ChatSignal.Domain.Interfaces.Service;
-using POC.ChatSignal.Domain.ViewModel.Base;
-using POC.ChatSignal.Domain.ViewModel.Usuario.Request;
-using POC.ChatSignal.Domain.ViewModel.Usuario.Response;
+using POC.ChatSignal.Domain.ViewModel.Api.Base;
+using POC.ChatSignal.Domain.ViewModel.Api.Usuario.Request;
+using POC.ChatSignal.Domain.ViewModel.Api.Usuario.Response;
 
 namespace POC.ChatSignal.API.Controllers
 {
@@ -13,6 +13,24 @@ namespace POC.ChatSignal.API.Controllers
     public class UsuarioController(IUsuarioService usuarioService) : BaseController
     {
         private readonly IUsuarioService _usuarioService = usuarioService;
+
+        [HttpGet]
+        public async Task<ActionResult<CustomResponseViewModel<ObterUsuariosResponse>>> ObterUsuarios()
+        {
+            try
+            {
+                var response = await _usuarioService.ObterUsuarios();
+                return CustomResponse(response);
+            }
+            catch (UsuarioException e)
+            {
+                return CustomResponseError(System.Net.HttpStatusCode.BadRequest, e);
+            }
+            catch (Exception e)
+            {
+                return CustomResponseError(System.Net.HttpStatusCode.InternalServerError, e);
+            }
+        }
 
         [HttpPost("signin")]
         public async Task<ActionResult<CustomResponseViewModel<LoginResponse>>> Login([FromBody] LoginRequest request)
@@ -38,42 +56,6 @@ namespace POC.ChatSignal.API.Controllers
             try
             {
                 await _usuarioService.Criar(request);
-                return CustomResponse<object>(null);
-            }
-            catch (UsuarioException e)
-            {
-                return CustomResponseError(System.Net.HttpStatusCode.BadRequest, e);
-            }
-            catch (Exception e)
-            {
-                return CustomResponseError(System.Net.HttpStatusCode.InternalServerError, e);
-            }
-        }
-
-        [HttpPatch("connection")]
-        public async Task<ActionResult<CustomResponseViewModel<object>>> AtualizarConnection([FromBody] AtualizarConnectionRequest request)
-        {
-            try
-            {
-                await _usuarioService.AtualizarConnection(request);
-                return CustomResponse<object>(null);
-            }
-            catch (UsuarioException e)
-            {
-                return CustomResponseError(System.Net.HttpStatusCode.BadRequest, e);
-            }
-            catch (Exception e)
-            {
-                return CustomResponseError(System.Net.HttpStatusCode.InternalServerError, e);
-            }
-        }
-
-        [HttpDelete("{usuarioId}/connection/{connectionId}")]
-        public async Task<ActionResult<CustomResponseViewModel<object>>> RemoverConnection(int usuarioId, string connectionId)
-        {
-            try
-            {
-                await _usuarioService.RemoverConnection(usuarioId, connectionId);
                 return CustomResponse<object>(null);
             }
             catch (UsuarioException e)

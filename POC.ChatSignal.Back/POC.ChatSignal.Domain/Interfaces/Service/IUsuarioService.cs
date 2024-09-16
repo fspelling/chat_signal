@@ -1,5 +1,5 @@
-﻿using POC.ChatSignal.Domain.ViewModel.Usuario.Request;
-using POC.ChatSignal.Domain.ViewModel.Usuario.Response;
+﻿using POC.ChatSignal.Domain.ViewModel.Api.Usuario.Request;
+using POC.ChatSignal.Domain.ViewModel.Api.Usuario.Response;
 
 namespace POC.ChatSignal.Domain.Interfaces.Service
 {
@@ -7,7 +7,6 @@ namespace POC.ChatSignal.Domain.Interfaces.Service
     {
         Task Criar(CadastrarUsuarioRequest request);
         Task<LoginResponse> Login(LoginRequest request);
-        Task AtualizarConnection(AtualizarConnectionRequest request);
-        Task RemoverConnection(int usuarioId, string connectionId);
+        Task<ObterUsuariosResponse> ObterUsuarios();
     }
 }

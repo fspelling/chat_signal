@@ -21,6 +21,7 @@ builder.Services.AddCors(options =>
 
 builder.ConfigureInjectDependency();
 builder.ConfigureSqlDbContext();
+builder.ConfigureValidators();
 
 var app = builder.Build();
 

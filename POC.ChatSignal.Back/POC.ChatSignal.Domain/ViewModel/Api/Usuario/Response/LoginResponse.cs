@@ -1,4 +1,4 @@
-﻿namespace POC.ChatSignal.Domain.ViewModel.Usuario.Response
+﻿namespace POC.ChatSignal.Domain.ViewModel.Api.Usuario.Response
 {
     public class LoginResponse
     {

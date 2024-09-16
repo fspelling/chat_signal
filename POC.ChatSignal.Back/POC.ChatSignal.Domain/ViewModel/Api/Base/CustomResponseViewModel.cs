@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace POC.ChatSignal.Domain.ViewModel.Base
+namespace POC.ChatSignal.Domain.ViewModel.Api.Base
 {
     public class CustomResponseViewModel<T>(T result)
     {
